@@ -15,19 +15,39 @@ body {
 
 /* ================= HEADER ================= */
 header {
-    background-color: #6D28D9;
-    /* cor de fundo do cabeçalho */
+    /* --- AS MUDANÇAS ESTÃO AQUI --- */
 
+    /* 1. Removemos a cor sólida antiga e adicionamos a imagem */
+    /* Substitua 'fundo-header.jpg' pelo nome real do seu arquivo */
+    background-image: url(Imagens/toposite.png');
+
+    /* 2. Garante que a imagem cubra todo o cabeçalho sem distorcer */
+    background-size: cover;
+
+    /* 3. Centraliza a imagem (caso ela seja maior que o header) */
+    background-position: center;
+
+    /* 4. Evita que a imagem se repita (caso seja pequena) */
+    background-repeat: no-repeat;
+
+    /* 5. (OPCIONAL) Adiciona uma camada escura sobre a imagem para garantir que o texto branco fique legível.
+       Isso cria um degradê preto transparente sobre a imagem. Ajuste o '0.5' (50% de opacidade) se precisar. */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Imagens/toposite.png');
+
+    /* --- FIM DAS MUDANÇAS PRINCIPAIS --- */
+
+
+    /* Mantemos as outras propriedades que já funcionavam */
     color: white;
     /* cor do texto dentro do header */
 
     text-align: center;
     /* centraliza o conteúdo horizontalmente */
 
-    padding-top: 65px;
+    padding-top: 100px; /* Aumentei um pouco para dar mais destaque à imagem */
     /* espaço interno acima */
 
-    padding-bottom: 15px;
+    padding-bottom: 40px; /* Aumentei um pouco para equilibrar */
     /* espaço interno abaixo */
 }
 
@@ -468,4 +488,70 @@ html {
     justify-content: space-between;      /* Empurra o Horário para a esquerda e o Título para a direita */
     align-items: center;                 /* Alinha os textos verticalmente ao centro do card */
     box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra bem leve para dar profundidade ao card */
+}
+
+
+/* Estilização exclusiva para a seção de Programação */
+
+
+#programa {
+    padding: 60px 10%;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* Título "Programação" */
+#programa h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+    color: #2d3436;
+}
+
+
+/* Barra verde abaixo do título */
+#programa h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #32a041; /* Verde IFSP */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Container da Lista */
+#programa ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/* Itens da Agenda (Cards) */
+#programa li {
+    background: #f9f9f9; /* Cinza claro de fundo */
+    margin-bottom: 12px;
+    padding: 1.5rem;
+    border-left: 6px solid #32a041; /* Destaque lateral verde */
+    border-radius: 0 8px 8px 0;
+    font-weight: 600;
+    color: #2d3436;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Efeito de destaque ao passar o mouse */
+#programa li:hover {
+    background: #f0f0f0;
+    transition: 0.3s ease;
 }
