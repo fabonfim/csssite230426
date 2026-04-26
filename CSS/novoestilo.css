@@ -325,9 +325,13 @@ footer {
    9. FORMULÁRIO DE INSCRIÇÃO
    ========================================================================== */
 
-#inscricao p {
-    text-align: center;
-    width: 100%; /* Garante que ele ocupe a largura total para poder alinhar ao centro */
+#inscricao {
+    text-align: center; /* Centraliza o texto */
+}
+
+#inscricao form {
+    margin: 0 auto;    /* Centraliza o bloco do formulário na página */
+    display: block;    /* Garante que o formulário se comporte como um bloco */
 }
 
 form {
