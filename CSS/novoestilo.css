@@ -1,0 +1,317 @@
+/* ==========================================================================
+   1. RESET E VARIÁVEIS GERAIS
+   ========================================================================== */
+
+
+:root {
+    --primary: #6D28D9;       /* Roxo Principal */
+    --primary-hover: #5B21B6; /* Roxo Escuro para Hovers */
+    --primary-light: #EDE9FE; /* Roxo muito claro para fundos de cards */
+    --bg-page: #F5F3FF;       /* Cor de fundo da página */
+    --white: #FFFFFF;         /* Branco puro */
+    --text-dark: #1E1B4B;     /* Azul/Roxo muito escuro para textos */
+    --text-muted: #6B7280;    /* Cinza para textos secundários */
+    --border-color: #DDD6FE;  /* Cor de borda suave */
+    --shadow: 0 4px 12px rgba(109, 40, 217, 0.08); /* Sombra temática */
+}
+
+
+html {
+    scroll-behavior: smooth; /* Proporciona uma rolagem suave ao navegar por âncoras */
+}
+
+
+body {
+    margin: 0; /* Remove as margens padrão do navegador */
+    padding: 0; /* Remove o preenchimento padrão do navegador */
+    font-family: 'Inter', Arial, Helvetica, sans-serif; /* Define a família tipográfica */
+    background-color: var(--bg-page); /* Aplica a cor de fundo clara da página */
+    color: var(--text-dark); /* Define a cor padrão do texto */
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+}
+
+
+/* ==========================================================================
+   2. HEADER (CABEÇALHO)
+   ========================================================================== */
+
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Imagens/big.png'); /* Overlay escuro para leitura + imagem */
+    background-size: cover; /* Garante que a imagem cubra todo o cabeçalho */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    color: var(--white); /* Cor do texto em branco para contraste */
+    text-align: center; /* Centraliza o conteúdo textual */
+    padding-top: 120px; /* Espaçamento superior amplo para destacar a imagem */
+    padding-bottom: 60px; /* Espaçamento inferior para equilíbrio visual */
+}
+
+
+/* ==========================================================================
+   3. NAVEGAÇÃO (NAVBAR)
+   ========================================================================== */
+
+
+nav {
+    position: fixed; /* Mantém o menu fixo no topo durante a rolagem */
+    top: 15px; /* Distância do topo da janela */
+    left: 50%; /* Posiciona o início do elemento no centro horizontal */
+    transform: translateX(-50%); /* Ajusta o centro do próprio elemento para o meio exato */
+    z-index: 1000; /* Garante que o menu fique sobre todos os outros elementos */
+    display: flex; /* Habilita o Flexbox para alinhamento interno */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    padding: 8px 24px; /* Espaçamento interno lateral e vertical */
+    background: rgba(109, 40, 217, 0.85); /* Roxo principal com transparência */
+    backdrop-filter: blur(1px); /* Efeito de desfoque estilo "Glassmorphism" */
+    border-radius: 30px; /* Bordas arredondadas estilo pílula */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra para dar profundidade */
+    transition: all 0.3s ease; /* Transição suave para mudanças de estado */
+}
+
+
+nav:hover {
+    background: rgba(109, 40, 217, 1); /* Remove a transparência ao passar o mouse */
+}
+
+
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0; /* Zera o preenchimento da lista */
+    margin: 0; /* Zera a margem da lista */
+    display: flex; /* Alinha os itens da lista lado a lado */
+    gap: 20px; /* Espaçamento entre os links do menu */
+}
+
+
+nav a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: var(--white); /* Define a cor do texto como branco */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 8px 12px; /* Área de clique confortável */
+    border-radius: 20px; /* Arredondamento para o fundo do hover */
+    transition: background 0.2s ease; /* Transição suave para o fundo */
+}
+
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Fundo levemente branco ao passar o mouse */
+}
+
+
+nav a.active {
+    background: var(--white); /* Fundo branco para o link da página atual */
+    color: var(--primary); /* Texto roxo para o link da página atual */
+}
+
+
+/* ==========================================================================
+   4. ESTRUTURA PRINCIPAL E SEÇÕES
+   ========================================================================== */
+
+
+main {
+    padding: 40px 20px; /* Espaçamento interno da área principal */
+}
+
+
+section {
+    background-color: var(--white); /* Fundo branco para as seções de conteúdo */
+    margin: 40px auto; /* Margem vertical e centralização horizontal */
+    padding: 40px; /* Espaçamento interno generoso */
+    border-radius: 20px; /* Cantos arredondados para modernidade */
+    width: 90%; /* Largura responsiva */
+    max-width: 1100px; /* Limite de largura para telas grandes */
+    box-shadow: var(--shadow); /* Aplica a sombra definida nas variáveis */
+}
+
+
+h2 {
+    text-align: center; /* Centraliza os títulos das seções */
+    margin-bottom: 30px; /* Espaço entre o título e o conteúdo */
+    color: var(--primary); /* Aplica a cor roxa ao título */
+    font-size: 2rem; /* Tamanho da fonte do título */
+}
+
+
+/* ==========================================================================
+   5. GRID E CARDS (ARTICLES)
+   ========================================================================== */
+
+
+.grid {
+    display: flex; /* Alinha os cards usando flexbox */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 30px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards pulem para a próxima linha */
+}
+
+
+.grid article {
+    background-color: var(--primary-light); /* Fundo roxo muito claro para o card */
+    border-radius: 18px; /* Cantos arredondados do card */
+    padding: 20px; /* Espaçamento interno do card */
+    width: 280px; /* Largura base do card */
+    text-align: center; /* Centraliza o texto dentro do card */
+    display: flex; /* Flexbox para organizar conteúdo interno */
+    flex-direction: column; /* Organiza itens de cima para baixo */
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra leve para o card */
+    transition: transform 0.3s ease; /* Transição para o efeito de elevação */
+}
+
+
+.grid article:hover {
+    transform: translateY(-8px); /* Eleva o card ao passar o mouse */
+}
+
+
+.grid p {
+    flex-grow: 1; /* Faz o parágrafo ocupar o espaço disponível */
+    margin: 15px 0; /* Margem vertical para separar texto */
+}
+
+
+/* ==========================================================================
+   6. MÍDIA (IMAGENS E ÍCONES)
+   ========================================================================== */
+
+
+img {
+    width: 100%; /* Imagem ocupa toda a largura do container pai */
+    height: 180px; /* Altura fixa para uniformidade */
+    object-fit: cover; /* Recorta a imagem sem distorcer para preencher o espaço */
+    border-radius: 12px; /* Cantos arredondados na imagem */
+}
+
+
+.grid article img {
+    object-position: top; /* Foca na parte superior da imagem dentro do card */
+}
+
+
+.icone {
+    width: 45px; /* Largura fixa para ícones */
+    height: 45px; /* Altura fixa para ícones */
+    margin: 10px auto; /* Centraliza e adiciona margem superior */
+    transition: transform 0.2s ease; /* Suavidade na animação de escala */
+}
+
+
+.icone:hover {
+    transform: scale(1.15); /* Aumenta levemente o ícone no hover */
+}
+
+
+/* ==========================================================================
+   7. INTERAÇÕES E BOTÕES
+   ========================================================================== */
+
+
+.btn, button {
+    background-color: var(--primary); /* Cor de fundo roxa */
+    color: var(--white); /* Cor do texto branca */
+    padding: 12px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado se for link */
+    display: inline-block; /* Permite dimensões e alinhamento */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: none; /* Remove bordas padrão */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Cursor de mão ao passar por cima */
+    transition: background 0.3s ease; /* Transição de cor suave */
+    width: 100%; /* Por padrão ocupa largura total no container */
+    margin-top: 15px; /* Espaço superior */
+}
+
+
+.btn:hover, button:hover {
+    background-color: var(--primary-hover); /* Escurece o roxo no hover */
+}
+
+
+/* ==========================================================================
+   8. FORMULÁRIOS
+   ========================================================================== */
+
+
+input, textarea {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 12px; /* Espaço para digitação confortável */
+    margin-top: 12px; /* Espaço entre campos */
+    border-radius: 8px; /* Arredondamento dos campos */
+    border: 1px solid var(--border-color); /* Borda roxa clara */
+    box-sizing: border-box; /* Garante que padding não aumente a largura total */
+    font-family: inherit; /* Herda a fonte do body */
+}
+
+
+input:focus, textarea:focus {
+    outline: none; /* Remove o contorno padrão */
+    border-color: var(--primary); /* Destaca a borda com o roxo principal no foco */
+    box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.1); /* Brilho sutil ao focar */
+}
+
+
+/* ==========================================================================
+   9. SEÇÃO PROGRAMAÇÃO (REESTRUTURADA)
+   ========================================================================== */
+
+
+#programa {
+    padding: 60px 20px; /* Espaçamento da seção */
+    background-color: var(--white); /* Fundo branco */
+}
+
+
+#programa h2::after {
+    content: ''; /* Elemento decorativo vazio */
+    width: 60px; /* Largura da linha decorativa */
+    height: 4px; /* Espessura da linha */
+    background: var(--primary); /* Linha na cor roxa */
+    display: block; /* Garante que fique em uma nova linha */
+    margin: 10px auto 0; /* Centraliza e afasta do texto */
+}
+
+
+#programa ul {
+    list-style: none; /* Remove marcadores da lista */
+    max-width: 800px; /* Largura máxima da lista de programação */
+    margin: 0 auto; /* Centraliza a lista na tela */
+    padding: 0; /* Remove preenchimento */
+}
+
+
+#programa li {
+    background: var(--bg-page); /* Fundo roxo muito claro para o item */
+    margin-bottom: 15px; /* Espaço entre itens da agenda */
+    padding: 20px; /* Espaçamento interno */
+    border-left: 6px solid var(--primary); /* Barra lateral roxa de destaque */
+    border-radius: 0 12px 12px 0; /* Arredonda apenas os cantos direitos */
+    font-weight: 600; /* Texto semi-negrito */
+    color: var(--text-dark); /* Cor do texto */
+    display: flex; /* Flexbox para organizar horário e título */
+    justify-content: space-between; /* Horário na esquerda, título na direita */
+    align-items: center; /* Alinha verticalmente no centro */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Sombra muito sutil */
+    transition: transform 0.2s ease; /* Suavidade no hover */
+}
+
+
+#programa li:hover {
+    transform: scale(1.01); /* Aumento imperceptível para feedback visual */
+    background: var(--primary-light); /* Muda ligeiramente o fundo no hover */
+}
+
+
+/* ==========================================================================
+   10. FOOTER (RODAPÉ)
+   ========================================================================== */
+
+
+footer {
+    background-color: var(--text-dark); /* Fundo azul/roxo escuro */
+    color: var(--white); /* Texto branco */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 30px 20px; /* Espaçamento interno */
+    margin-top: 50px; /* Afasta do conteúdo acima */
+}
