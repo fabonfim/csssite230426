@@ -19,7 +19,7 @@ header {
 
     /* 1. Removemos a cor sólida antiga e adicionamos a imagem */
     /* Substitua 'fundo-header.jpg' pelo nome real do seu arquivo */
-    background-image: url(Imagens/toposite.png');
+    background-image: url(Imagens/toposite.png);
 
     /* 2. Garante que a imagem cubra todo o cabeçalho sem distorcer */
     background-size: cover;
@@ -32,7 +32,7 @@ header {
 
     /* 5. (OPCIONAL) Adiciona uma camada escura sobre a imagem para garantir que o texto branco fique legível.
        Isso cria um degradê preto transparente sobre a imagem. Ajuste o '0.5' (50% de opacidade) se precisar. */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Imagens/toposite.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Imagens/toposite.png);
 
     /* --- FIM DAS MUDANÇAS PRINCIPAIS --- */
 
