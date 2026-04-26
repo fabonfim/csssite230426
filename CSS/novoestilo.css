@@ -35,6 +35,9 @@ body {
    2. HEADER (CABEÇALHO)
    ========================================================================== */
 
+header h1 {
+   fonte-size: 3rem;
+}
 
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../Imagens/big.png"); /* Overlay escuro para leitura + imagem */
@@ -43,7 +46,6 @@ header {
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     color: var(--white); /* Cor do texto em branco para contraste */
     text-align: center; /* Centraliza o conteúdo textual */
-    font-size: 8rem;
     padding-top: 120px; /* Espaçamento superior amplo para destacar a imagem */
     padding-bottom: 60px; /* Espaçamento inferior para equilíbrio visual */
    min-height: 150px; /* Adicione uma altura mínima para testar se o bloco aparece */
