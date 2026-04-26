@@ -322,6 +322,9 @@ footer {
    9. FORMULÁRIO DE INSCRIÇÃO
    ========================================================================== */
 
+section .inscricao p {
+   text-align: center;
+}
 
 form {
     background: var(--primary-light); /* Fundo suave para o container do formulário */
