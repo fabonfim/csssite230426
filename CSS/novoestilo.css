@@ -45,7 +45,7 @@ header {
     text-align: center; /* Centraliza o conteúdo textual */
     padding-top: 120px; /* Espaçamento superior amplo para destacar a imagem */
     padding-bottom: 60px; /* Espaçamento inferior para equilíbrio visual */
-   min-height: 300px; /* Adicione uma altura mínima para testar se o bloco aparece */
+   min-height: 150px; /* Adicione uma altura mínima para testar se o bloco aparece */
 }
 
 
