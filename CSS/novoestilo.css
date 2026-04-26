@@ -308,11 +308,79 @@ input:focus, textarea:focus {
    10. FOOTER (RODAPÉ)
    ========================================================================== */
 
-
+/*
 footer {
     background-color: var(--text-dark); /* Fundo azul/roxo escuro */
-    color: var(--white); /* Texto branco */
-    text-align: center; /* Centraliza o conteúdo */
-    padding: 30px 20px; /* Espaçamento interno */
-    margin-top: 50px; /* Afasta do conteúdo acima */
+    /* des / color: var(--white); /* Texto branco */
+   /*des /  text-align: center; /* Centraliza o conteúdo */
+   /*des/  padding: 30px 20px; /* Espaçamento interno */
+    /* des/ margin-top: 50px; /* Afasta do conteúdo acima */
+/*} */
+
+
+/* ==========================================================================
+   9. FORMULÁRIO DE INSCRIÇÃO
+   ========================================================================== */
+
+
+form {
+    background: var(--primary-light); /* Fundo suave para o container do formulário */
+    padding: 40px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    width: 100%; /* Ocupa largura total disponível */
+    max-width: 600px; /* Limita largura do form */
+    margin: 20px auto; /* Centraliza */
 }
+
+
+form input, form textarea {
+    width: 100%; /* Largura total */
+    padding: 14px; /* Espaço para digitação */
+    margin-bottom: 20px; /* Espaço entre campos */
+    border-radius: 10px; /* Arredonda campos */
+    border: 2px solid var(--white); /* Borda branca grossa */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-family: inherit; /* Herda tipografia */
+    transition: var(--transition); /* Suavidade no foco */
+}
+
+
+form input:focus, form textarea:focus {
+    outline: none; /* Remove contorno padrão */
+    border-color: var(--primary); /* Borda roxa no foco */
+    background: var(--white); /* Garante fundo branco no foco */
+}
+
+
+/* ==========================================================================
+   10. RODAPÉ E RESPONSIVIDADE
+   ========================================================================== */
+
+
+footer {
+    background-color: var(--text-dark); /* Fundo roxo escuro */
+    color: var(--white); /* Texto em branco */
+    text-align: center; /* Centraliza conteúdo */
+    padding: 40px 20px; /* Espaçamento interno */
+    margin-top: 60px; /* Afasta do conteúdo superior */
+}
+
+
+footer p {
+    opacity: 0.8; /* Texto levemente opaco */
+    font-size: 0.9rem; /* Fonte menor */
+}
+
+
+/* Ajustes para Dispositivos Móveis */
+@media (max-width: 768px) {
+    header#info h1 { font-size: 2.5rem; } /* Título menor no mobile */
+    header#info p { font-size: 1.1rem; } /* Parágrafo menor no mobile */
+    nav { width: 90%; top: 10px; } /* Menu ocupa mais largura e sobe mais */
+    nav ul { gap: 10px; } /* Diminui gap entre links */
+    nav ul li a { font-size: 0.8rem; padding: 6px 10px; } /* Fonte menor no menu */
+    section { padding: 40px 5%; } /* Reduz margens laterais no mobile */
+    #programa li { flex-direction: column; text-align: center; gap: 10px; } /* Empilha horário e evento */
+}
+
+
