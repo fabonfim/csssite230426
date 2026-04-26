@@ -30,7 +30,10 @@ header {
     /* 4. Evita que a imagem se repita (caso seja pequena) */
     background-repeat: no-repeat;
 
-    
+        /* 5. (OPCIONAL) Adiciona uma camada escura sobre a imagem para garantir que o texto branco fique legível.
+       Isso cria um degradê preto transparente sobre a imagem. Ajuste o '0.5' (50% de opacidade) se precisar. */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Imagens/toposite.png");
+
 
     /* --- FIM DAS MUDANÇAS PRINCIPAIS --- */
 
