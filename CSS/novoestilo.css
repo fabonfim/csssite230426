@@ -371,17 +371,6 @@ footer p {
 }
 
 
-/* Ajustes para Dispositivos Móveis */
-@media (max-width: 768px) {
-    header#info h1 { font-size: 2.5rem; } /* Título menor no mobile */
-    header#info p { font-size: 1.1rem; } /* Parágrafo menor no mobile */
-    nav { width: 90%; top: 10px; } /* Menu ocupa mais largura e sobe mais */
-    nav ul { gap: 10px; } /* Diminui gap entre links */
-    nav ul li a { font-size: 0.8rem; padding: 6px 10px; } /* Fonte menor no menu */
-    section { padding: 40px 5%; } /* Reduz margens laterais no mobile */
-    #programa li { flex-direction: column; text-align: center; gap: 10px; } /* Empilha horário e evento */
-}
-
 /* Botao Whats - Simulando contato */
 
 .whatsapp {
