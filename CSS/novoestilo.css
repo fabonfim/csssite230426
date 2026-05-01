@@ -36,17 +36,18 @@ body {
    ========================================================================== */
 
 header h1 {
-   fonte-size: 3rem;
+   font-size: 60px;
+   line-height: 0.6; /* Melhora a legibilidade do texto */
 }
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../Imagens/big.png"); /* Overlay escuro para leitura + imagem */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../Imagens/big.png"); /* Overlay escuro para leitura + imagem */
     background-size: cover; /* Garante que a imagem cubra todo o cabeçalho */
     background-position: center; /* Centraliza a imagem de fundo */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     color: var(--white); /* Cor do texto em branco para contraste */
     text-align: center; /* Centraliza o conteúdo textual */
-    padding-top: 120px; /* Espaçamento superior amplo para destacar a imagem */
+    padding-top: 100px; /* Espaçamento superior amplo para destacar a imagem */
     padding-bottom: 60px; /* Espaçamento inferior para equilíbrio visual */
    min-height: 150px; /* Adicione uma altura mínima para testar se o bloco aparece */
 }
@@ -307,19 +308,6 @@ input:focus, textarea:focus {
 }
 
 
-/* ==========================================================================
-   10. FOOTER (RODAPÉ)
-   ========================================================================== */
-
-/*
-footer {
-    background-color: var(--text-dark); /* Fundo azul/roxo escuro */
-    /* des / color: var(--white); /* Texto branco */
-   /*des /  text-align: center; /* Centraliza o conteúdo */
-   /*des/  padding: 30px 20px; /* Espaçamento interno */
-    /* des/ margin-top: 50px; /* Afasta do conteúdo acima */
-/*} */
-
 
 /* ==========================================================================
    9. FORMULÁRIO DE INSCRIÇÃO
@@ -372,7 +360,7 @@ footer {
     background-color: var(--text-dark); /* Fundo roxo escuro */
     color: var(--white); /* Texto em branco */
     text-align: center; /* Centraliza conteúdo */
-    padding: 40px 20px; /* Espaçamento interno */
+    padding: 10px 10px; /* Espaçamento interno */
     margin-top: 60px; /* Afasta do conteúdo superior */
 }
 
@@ -394,4 +382,23 @@ footer p {
     #programa li { flex-direction: column; text-align: center; gap: 10px; } /* Empilha horário e evento */
 }
 
+/* Botao Whats - Simulando contato */
 
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp img {
+    width: 60px; /* tamanho correto */
+    height: auto; /* mantém proporção */
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* efeito ao passar o mouse */
+.whatsapp:hover {
+    transform: scale(1.1);
+}
